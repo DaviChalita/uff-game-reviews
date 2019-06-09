@@ -1,5 +1,4 @@
 <%
-
 %>
 
 <!DOCTYPE html>
@@ -12,15 +11,15 @@
 	<link href="https://unpkg.com/nes.css@2.2.0/css/nes.min.css" rel="stylesheet" />   
 	<link rel="stylesheet" href="css/simple-grid.min.css">    
 	<link rel="stylesheet" href="css/shared.css">
-	<title>Document</title>
+	<title>Cadastro</title>
 </head>
 <body>
 	<div class="container">
 		<div class="row">
 			<div class="center col-6 container-margin">   
-				<div class="nes-container with-title is-rounded is-centered">
-					<div class="title">Cadastro</div>
-					<form>
+				<div class="nes-container with-title is-rounded is-centered bgyellow">
+					<div class="title bgyellow">Cadastro</div>
+					<form action="" method="POST">
 						<div class="nes-field form-item">
 							<label for="username">Username</label>
 							<input type="text" id="username" class="nes-input">
@@ -38,7 +37,7 @@
 							<input type="password" id="senha" class="nes-input">
 						</div>
 						<div class="form-button">
-							<button type="button" class="nes-btn is-primary">Confirmar</button>
+							<button type="submit" class="nes-btn is-success">Confirmar</button>
 						</div>
 					</form>
 				</div>       

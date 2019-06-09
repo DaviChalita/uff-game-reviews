@@ -3,7 +3,7 @@ package br.com.uff.uffgamereviews.model;
 public class User {
 	private String username;
 	private String email;
-	private String password;
+	private String senha;
 	//private List<Post> notas;
 	
 	public User() {}
@@ -24,12 +24,12 @@ public class User {
 		this.email = email;
 	}
 
-	public String getPassword() {
-		return password;
+	public String getSenha() {
+		return senha;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setSenha(String senha) {
+		this.senha = senha;
 	}
 	
 	

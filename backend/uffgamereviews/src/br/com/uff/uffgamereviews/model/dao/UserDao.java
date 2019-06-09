@@ -28,8 +28,22 @@ public class UserDao implements Dao<User> {
 	}
 
 	@Override
-	public User get(int index) {
-		return usuarios.get(index);
+	public User get(String email) {
+		for (User user : usuarios) {
+			if (user.getEmail().equals(email)) return user;
+		}
+		return null;
 	}
-
+	
+	public User update(String email, User usuario) {
+		for (User user : usuarios) {
+			if (user.getEmail().equals(email)) {
+				delete(usuarios.indexOf(usuario));
+				usuarios.add(usuario);
+				return usuario;
+			}
+		}
+		return null;
+	}
+	
 }
