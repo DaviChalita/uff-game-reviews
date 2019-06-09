@@ -1,0 +1,11 @@
+/* The popup form - hidden by default */
+
+.form-popup {
+    width: 265px;
+    height: 191px;
+    position: absolute;
+    top: 51%;
+    left: 41%;
+    margin: -50px 0 0 -100px;
+    display: none;
+}
