@@ -1,3 +1,12 @@
 *  {
     font-family: 'Press Start 2P', cursive !important; 
 }
+
+.form-item {
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+.form-button {
+	margin-top: 18px;
+}
