@@ -2,6 +2,10 @@
     font-family: 'Press Start 2P', cursive !important; 
 }
 
+.container-margin {
+	margin-top: 60px;
+}
+
 .form-item {
 	margin-top: 12px;
 	margin-bottom: 12px;
