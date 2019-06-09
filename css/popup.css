@@ -1,11 +1,11 @@
 /* The popup form - hidden by default */
 
 .form-popup {
-    width: 265px;
-    height: 191px;
+    width: 379px;
+    height: 136px;
     position: absolute;
-    top: 51%;
-    left: 41%;
-    margin: -50px 0 0 -100px;
+    top: 55%;
+    left: 30%;
+    margin: -53px 0 0 -100px;
     display: none;
 }
