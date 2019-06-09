@@ -27,3 +27,11 @@
 .background-image {
     background-image: url('../img/thumb-1920-333223.jpg')
 }
+
+.id-column {
+    height: 650px;
+}
+
+.margin-28px {
+    margin-bottom: 28px;
+}
