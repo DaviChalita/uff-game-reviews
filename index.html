@@ -9,6 +9,8 @@
     <link href="https://unpkg.com/nes.css@2.2.0/css/nes.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/simple-grid.min.css">
     <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <script type="text/javascript" src="js/popupconfirm.js"></script>
     <title>Login</title>
 </head>
 
@@ -18,7 +20,7 @@
             <div class="center col-6 container-margin ">
                 <div class="nes-container with-title bgyellow">
                     <div class="title bgyellow">Login</div>
-                    <form action="" method="POST">
+                    <form action="" method="POST" name="formLogin">
                         <div class="nes-field form-item">
                             <div><label for="dark_field" class="form-item" style="color:black;">Email</label>
                                 <input type="text" id="email" class="nes-input">
@@ -28,7 +30,18 @@
                                 <input type="password" id="email" class="nes-input">
                             </div>
                             <div class="nes-field form-button">
-                                <button type="submit" class="nes-btn is-success form-button">Confirmar</button>
+                                <button type="button" class="nes-btn is-success form-button" onclick="openForm()">Confirmar</button>
+                            </div>
+                            <div class="bgyellow nes-container is-centered form-popup"  id="formPopUp">
+                                <p>Are you sure about that?</p>
+                                <label>
+                                    <input type="radio" class="nes-radio" name="answer" onclick="submitForm()"/>
+                                    <span>Yes</span>
+                                </label>                                
+                                <label>
+                                    <input type="radio" class="nes-radio" name="answer" onclick="closeForm()"/>
+                                    <span>No</span>
+                                </label>
                             </div>
                             <div class='form-item font-size-8px'>
                                 <a href="esqueceusenha.html" class="form-item">Esqueceu sua senha?</a>
