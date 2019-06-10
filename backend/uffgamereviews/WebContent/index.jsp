@@ -1,26 +1,24 @@
 <%
+
 %>
 
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/nes.css@2.2.0/css/nes.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/simple-grid.min.css">
-    <link rel="stylesheet" href="css/shared.css">
-    <link rel="stylesheet" href="css/popup.css">
-    <script type="text/javascript" src="js/popupconfirm.js"></script>
+    <meta charset="UTF-8">    
     <title>Login</title>
+     <meta name="viewport"  content="width=device-width, initial-scale=1">   
+    <link rel="stylesheet"  type="text/css" href="assets/stylesheets/nes.min.css">
+    <link rel="stylesheet"  type="text/css" href="assets/stylesheets/simple-grid.min.css">
+    <link rel="stylesheet"  type="text/css" href="assets/stylesheets/shared.css">
+    <link rel="stylesheet"  type="text/css" href="assets/stylesheets/popup.css">
+    <script type="text/javascript" src="assets/js/popupconfirm.js"></script>    
 </head>
 
 <body class="background-image">
     <div class="container">
         <div class="row">
-            <div class="center col-6 container-margin ">
+            <div class="center col-6 container-margin">
                 <div class="nes-container with-title is-centered bgyellow">
                     <div class="title bgyellow">Login</div>
                     <form action="" method="POST" name="formLogin">
@@ -47,10 +45,10 @@
                                 </label>
                             </div>
                             <div class='form-item font-size-8px'>
-                                <a href="esqueceusenha.html" class="form-item">Esqueceu sua senha?</a>
+                                <a href="esqueceusenha.jsp" class="form-item">Esqueceu sua senha?</a>
                             </div>
                             <div class='form-item font-size-8px'>
-                                <a href="cadastro.html" class="form-item">Criar conta</a>
+                                <a href="cadastro.jsp" class="form-item">Criar conta</a>
                                 <!-- coin -->
                                 <i class="nes-icon coin is-small"></i>
                             </div>

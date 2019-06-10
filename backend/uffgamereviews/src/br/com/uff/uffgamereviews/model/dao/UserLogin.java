@@ -12,7 +12,7 @@ public class UserLogin {
 			return usuario;
 				
 		} else {
-			System.out.println("Usuário não encontrado");
+			System.out.println("Usuario nao encontrado");
 		}
 		
 		return null;

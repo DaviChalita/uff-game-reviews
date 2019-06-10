@@ -1,19 +1,19 @@
-<%
-%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+	<meta charset="ISO-8859-1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">  
-	<link href="https://unpkg.com/nes.css@2.2.0/css/nes.min.css" rel="stylesheet" />   
-	<link rel="stylesheet" href="css/simple-grid.min.css">    
-	<link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet"  type="text/css" href="assets/stylesheets/nes.min.css">
+    <link rel="stylesheet"  type="text/css" href="assets/stylesheets/simple-grid.min.css">
+    <link rel="stylesheet"  type="text/css" href="assets/stylesheets/shared.css">
+    <script type="text/javascript" src="assets/js/popupconfirm.js"></script>   
 	<title>Cadastro</title>
 </head>
-<body>
+<body class="background-image">
 	<div class="container">
 		<div class="row">
 			<div class="center col-6 container-margin">   
