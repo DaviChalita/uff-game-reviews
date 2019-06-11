@@ -4,9 +4,26 @@ public class User {
 	private String username;
 	private String email;
 	private String senha;
+	private int estrelas;
 	//private List<Post> notas;
 	
 	public User() {}
+	
+	public User(String username, String email, String senha, int estrelas) {
+		this.username = username;
+		this.email = email;
+		this.senha = senha;
+		this.estrelas = estrelas;		
+	}
+	
+	
+	public int getEstrelas() {
+		return estrelas;
+	}
+
+	public void setEstrelas(int estrelas) {
+		this.estrelas = estrelas;
+	}
 
 	public String getUsername() {
 		return username;
