@@ -89,7 +89,7 @@
                         Descrição
                     </div>
                     <div>
-                        <!-- <c:out value="${descricaoGame}" /> -->
+                         <c:out value="${descricaoGame}" /> 
                     </div>
                     <div>
                         <% for (int i = 0; i < numEstrelasGame; i++) { %>
