@@ -5,7 +5,6 @@ public class User {
 	private String email;
 	private String senha;
 	private int estrelas;
-	//private List<Post> notas;
 	
 	public User() {}
 	
