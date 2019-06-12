@@ -26,7 +26,7 @@
                                 <i class="nes-icon is-medium-50% star"></i>
                             <% } %>
                             <% for (int i = numEstrelasUser; i < 10; i++) { %>
-                                    <i class="nes-icon is-medium-50% star is-empty"></i>
+                                <i class="nes-icon is-medium-50% star is-empty"></i>
                             <% } %>
                         </section>
                     </div>
