@@ -22,6 +22,11 @@
                 <div class="nes-container id-column bgyellow">
                     <div class="stars">
                         <section class="icon-list">
+                            <p>
+                                <% for (int i = 0; i < numEstrelasUser; i++) { %>
+                                    <i class="nes-icon is-medium-50% star"></i>
+                                <% } %>
+                            </p>
                             <i class="nes-icon is-medium-50% star"></i>
                             <i class="nes-icon is-medium-50% star is-empty"></i>
                         </section>
@@ -82,9 +87,14 @@
                 </div>
                 <div class="nes-container with-title is-centered bgyellow margin-28px">
                     <div class="title bgyellow">
-                        Descrição
+                        Descriï¿½ï¿½o
                     </div>
-                    <p>Descrição para cada jogo com um marcador de qnts estrelas ele tem tipo (estrela X 6)</p>
+                    <p>
+                    <% for (int i = 0; i < numEstrelasGame; i++) { %>
+                        <i class="nes-icon is-medium-50% star"></i>
+                    <% } %>
+                    </p>
+                    <p>Descriï¿½ï¿½o para cada jogo com um marcador de qnts estrelas ele tem tipo (estrela X 6)</p>
                     <div class="nes-field form-button">
                         <button type="button" class="nes-btn is-primary">Like</button>
                     </div>
