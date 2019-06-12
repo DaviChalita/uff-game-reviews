@@ -21,7 +21,7 @@
             <div class="center col-6 container-margin">
                 <div class="nes-container with-title is-centered bgyellow">
                     <div class="title bgyellow">Login</div>
-                    <form action="" method="POST" name="formLogin">
+                    <form action="dashboard.jsp" method="POST" name="formLogin">
                         <div class="nes-field form-item">
                             <div><label for="dark_field" class="form-item" style="color:black;">Email</label>
                                 <input type="text" id="email" class="nes-input">

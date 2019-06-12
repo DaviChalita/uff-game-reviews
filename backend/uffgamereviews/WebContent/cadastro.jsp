@@ -19,15 +19,7 @@
 			<div class="center col-6 container-margin">   
 				<div class="nes-container with-title is-rounded is-centered bgyellow">
 					<div class="title bgyellow">Cadastro</div>
-					<form action="" method="POST">
-						<div class="nes-field form-item">
-							<label for="username">Username</label>
-							<input type="text" id="username" class="nes-input">
-						</div>                        
-						<div class="nes-field form-item">
-							<label for="name">Nome</label>
-							<input type="text" id="name" class="nes-input">
-						</div>
+					<form action="index.jsp" method="POST">  
 						<div class="nes-field form-item">
 							<label for="email">Email</label>
 							<input type="Email" id="email" class="nes-input">

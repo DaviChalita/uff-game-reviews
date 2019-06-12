@@ -18,14 +18,10 @@
             <div class="center col-6 container-margin">   
                     <div class="nes-container with-title bgyellow is-rounded is-centered">
                             <div class="title bgyellow">Recuperar senha</div>
-                                <form action="" method="POST">
+                                <form action="index.jsp" method="POST">
                                     <div class="nes-field form-item">
                                         <label for="dark_field" style="color:black;">Email</label>                                              
                                         <input type="text" id="email" class="nes-input">
-                                    </div>
-                                    <div class="nes-field form-item">
-                                        <label for="dark_field" style="color:black;">Senha antiga</label>                                              
-                                        <input type="password" id="email" class="nes-input"> 
                                     </div>
                                     <div class="nes-field form-item">
                                         <label for="password" style="color:black;">Nova senha</label>                                              
