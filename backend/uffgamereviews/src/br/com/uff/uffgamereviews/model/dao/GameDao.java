@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.uff.uffgamereviews.conector.Conector;
+import br.com.uff.uffgamereviews.connector.Connector;
 import br.com.uff.uffgamereviews.model.Game;
 import br.com.uff.uffgamereviews.model.User;
 
@@ -16,7 +16,7 @@ public class GameDao implements Dao<Game>{
 	@Override
 	public void save(Game jogo) {
 		// TODO Auto-generated method stub
-		Connection con = Conector.getConnection();
+		Connection con = Connector.getConnection();
 		try {
 			PreparedStatement st = con.prepareStatement("insert into jogo(rated_username, nota) values(?, ?)");
 			st.setString(1, jogo.getOwner().getUsername());
@@ -32,12 +32,11 @@ public class GameDao implements Dao<Game>{
 				
 	}
 
-	@Override
-	public void delete(int index) {
-		Connection con = Conector.getConnection();
+	public void delete(int id) {
+		Connection con = Connector.getConnection();
 		try {
 			PreparedStatement st = con.prepareStatement("delete from jogo where idJogo=?");
-			st.setInt(1, index);
+			st.setInt(1, id);
 			st.executeUpdate();
 			con.close();
 		}catch(SQLException e) {
@@ -47,12 +46,12 @@ public class GameDao implements Dao<Game>{
 		
 	}
 
-	public void update(int index, Game jogo) {
-		Connection con = Conector.getConnection();
+	public void update(int id, Game jogo) {
+		Connection con = Connector.getConnection();
 		
 		try {
 			PreparedStatement st1 = con.prepareStatement("delete from jogo where idJogo=?");
-			st1.setInt(1, index);
+			st1.setInt(1, id);
 			st1.executeUpdate();
 			
 			PreparedStatement st = con.prepareStatement("insert into jogo(rated_username, nota) values(?, ?)");
@@ -68,20 +67,14 @@ public class GameDao implements Dao<Game>{
 		}	
 	}
 	
-	@Override
-	public void lista() {
-		// TODO Auto-generated method stub
-		
-	}
-	
-	public Game get(int index) {		
-		Connection con = Conector.getConnection();
+	public Game get(int id) {		
+		Connection con = Connector.getConnection();
 		UserDao userDao = new UserDao();
 		Game jogo = null;
 
 		try {
 			PreparedStatement st = con.prepareStatement("select * from jogo where idJogo=?");
-			st.setInt(1, index);
+			st.setInt(1, id);
 			ResultSet rs = st.executeQuery();
 			
 			if (rs.next()) {
@@ -104,7 +97,7 @@ public class GameDao implements Dao<Game>{
 	}
 
 	public List<Game> getAll() {
-		Connection con = Conector.getConnection();
+		Connection con = Connector.getConnection();
 		UserDao userDao = new UserDao();
 		List<Game> jogos = new ArrayList<Game>();
 		

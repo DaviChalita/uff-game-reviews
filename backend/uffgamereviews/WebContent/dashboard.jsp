@@ -4,7 +4,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="ISO-8859-1">
+    <meta charset="UTF-8">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="assets/stylesheets/nes.min.css">
@@ -22,12 +22,18 @@
                 <div class="nes-container id-column bgyellow">
                     <div class="stars">
                         <section class="icon-list">
-                            <% for (int i = 0; i < numEstrelasUser; i++) { %>
-                                <i class="nes-icon is-medium-50% star"></i>
-                            <% } %>
+                           <%--  <% for (int i = 0; i < numEstrelasUser; i++) { %> --%>
+                                 <i class="nes-icon is-medium-50% star"></i> 
+                                 <i class="nes-icon is-medium-50% star"></i> 
+                                 <i class="nes-icon is-medium-50% star"></i> 
+                                 <i class="nes-icon is-medium-50% star"></i> 
+                                 <i class="nes-icon is-medium-50% star"></i> 
+                                 <i class="nes-icon is-medium-50% star"></i> 
+                                 <i class="nes-icon is-medium-50% star"></i> 
+                            <%--<% } %>
                             <% for (int i = numEstrelasUser; i < 10; i++) { %>
                                 <i class="nes-icon is-medium-50% star is-empty"></i>
-                            <% } %>
+                            <% } %> --%>
                         </section>
                     </div>
                 </div>
@@ -86,15 +92,15 @@
                 </div>
                 <div class="nes-container with-title is-centered bgyellow margin-28px">
                     <div class="title bgyellow">
-                        DescriÃ§Ã£o
+                        Descrição
                     </div>
                     <div>
                          <c:out value="${descricaoGame}" /> 
                     </div>
-                    <div>
+                    <div><%-- 
                         <% for (int i = 0; i < numEstrelasGame; i++) { %>
                             <i class="nes-icon is-medium-50% star"></i>
-                        <% } %>
+                        <% } %> --%>
                     </div>
                     <div class="nes-field form-button">
                         <button type="button" class="nes-btn is-primary">Like</button>

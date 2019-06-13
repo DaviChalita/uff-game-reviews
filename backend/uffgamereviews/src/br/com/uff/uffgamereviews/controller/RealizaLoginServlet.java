@@ -28,9 +28,9 @@ public class RealizaLoginServlet extends HttpServlet {
 		
 		if (usuario != null) {
 			HttpSession sessao = req.getSession(true);
-			sessao.setAttribute("username", usuario);
+			sessao.setAttribute("usuario", usuario);
 			
-			res.sendRedirect(URL_BASE + "/dashboard");
+			res.sendRedirect(URL_BASE + "dashboard");
 		}
 		
 		else {

@@ -27,7 +27,7 @@ public class RealizaRedefinicaoSenhaServlet extends HttpServlet {
 			return;
 		}
 		
-		userDao.resetSenha(usuario);
+		userDao.resetPassword(usuario);
 		res.sendRedirect("login");
 	}
 }

@@ -21,14 +21,15 @@
             <div class="center col-6 container-margin">
                 <div class="nes-container with-title is-centered bgyellow">
                     <div class="title bgyellow">Login</div>
-                    <form action="dashboard.jsp" method="POST" name="formLogin">
+                    <form action="realizaLogin" method="POST" name="formLogin">
                         <div class="nes-field form-item">
-                            <div><label for="dark_field" class="form-item" style="color:black;">Email</label>
-                                <input type="text" id="email" class="nes-input">
+                            <div>
+                            	<label for="dark_field" class="form-item" style="color:black;">Email</label>
+                                <input type="text" name="email" class="nes-input">
                             </div>
                             <div class="nes-field form-item">
                                 <label for="dark_field" class="form-item" style="color:black;">Senha</label>
-                                <input type="password" id="email" class="nes-input">
+                                <input type="password" name="senha" class="nes-input">
                             </div>
                             <div class="nes-field form-button">
                                 <button type="button" class="nes-btn is-success form-button" onclick="openForm()">Confirmar</button>
@@ -48,7 +49,7 @@
                                 <a href="esqueceusenha.jsp" class="form-item">Esqueceu sua senha?</a>
                             </div>
                             <div class='form-item font-size-8px'>
-                                <a href="cadastro.jsp" class="form-item">Criar conta</a>
+                                <a href="cadastro" class="form-item">Criar conta</a>
                                 <!-- coin -->
                                 <i class="nes-icon coin is-small"></i>
                             </div>

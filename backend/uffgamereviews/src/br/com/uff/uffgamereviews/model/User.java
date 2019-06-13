@@ -6,7 +6,9 @@ public class User {
 	private String senha;
 	private int estrelas;
 	
-	public User() {}
+	public User() {
+		
+	}
 	
 	public User(String username, String email, String senha, int estrelas) {
 		this.username = username;

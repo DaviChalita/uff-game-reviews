@@ -6,7 +6,7 @@ public class UserLogin {
 	
 	public static User Login(String email, String senha) {
 		UserDao dao = new UserDao();
-		User usuario = dao.get(email);
+		User usuario = dao.getByEmail(email);
 		
 		if (usuario != null && usuario.getSenha().equals(senha)) {
 			return usuario;

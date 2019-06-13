@@ -19,19 +19,8 @@ public class RealizaCadastroServlet extends HttpServlet {
 	User usuario = new User();
 
 	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-		usuario.setUsername(req.getParameter("username")); 
 		usuario.setEmail(req.getParameter("email"));
 		usuario.setSenha(req.getParameter("senha"));
-		
-		if (userDao.getByEmail(usuario.getEmail()) != null) {
-			res.sendRedirect("cadastra?err=email-ja-cadastrado");
-			return;
-		}
-		
-		if (userDao.getByUsername(usuario.getUsername()) != null) {
-			res.sendRedirect("cadastra?err=username-ja-cadastrado");
-			return;
-		}
 		
 		userDao.save(usuario);
 		res.sendRedirect("dashboard");

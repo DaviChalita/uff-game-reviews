@@ -30,10 +30,8 @@ public class DashboardServlet extends HttpServlet {
 
 			RequestDispatcher rd = req.getRequestDispatcher("/dashboard.jsp");
 			rd.forward(req, res);
-		}
-		
-		else {
-			res.sendRedirect(URL_BASE + "/index");
+		} else {
+			res.sendRedirect(URL_BASE + "/login");
 		}
 	}
 }

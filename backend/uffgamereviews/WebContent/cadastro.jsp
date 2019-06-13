@@ -19,14 +19,14 @@
 			<div class="center col-6 container-margin">   
 				<div class="nes-container with-title is-rounded is-centered bgyellow">
 					<div class="title bgyellow">Cadastro</div>
-					<form action="index.jsp" method="POST">  
+					<form action="realizaCadastro" method="POST">  
 						<div class="nes-field form-item">
 							<label for="email">Email</label>
-							<input type="Email" id="email" class="nes-input">
+							<input type="Email" id="email" name="email" class="nes-input">
 						</div>
 						<div class="nes-field form-item">
-							<label for="password">Senha</label>
-							<input type="password" id="senha" class="nes-input">
+							<label for="senha">Senha</label>
+							<input type="password" id="senha" name="senha" class="nes-input">
 						</div>
 						<div class="form-button">
 							<button type="submit" class="nes-btn is-success">Confirmar</button>
