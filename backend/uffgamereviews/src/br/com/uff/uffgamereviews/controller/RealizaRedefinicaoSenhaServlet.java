@@ -11,30 +11,23 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.uff.uffgamereviews.model.User;
 import br.com.uff.uffgamereviews.model.dao.UserDao;
 
-@WebServlet("/realizaCadastro")
-public class RealizaCadastroServlet extends HttpServlet {
+@WebServlet("/realizaRedefinicaoSenha")
+public class RealizaRedefinicaoSenhaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
 	UserDao userDao = new UserDao();
-	User usuario = new User();
 
 	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-		usuario.setUsername(req.getParameter("username")); 
+		User usuario = new User();
+		
 		usuario.setEmail(req.getParameter("email"));
-		usuario.setSenha(req.getParameter("senha"));
+		usuario.setSenha(req.getParameter("novaSenha"));
 		
-		if (userDao.getByEmail(usuario.getEmail()) != null) {
-			res.sendRedirect("cadastra?err=email-ja-cadastrado");
+		if (userDao.getByEmail(usuario.getEmail()) == null) {
+			res.sendRedirect("redefine-senha?err=usuario-nao-encontrado");	
 			return;
 		}
 		
-		if (userDao.getByUsername(usuario.getUsername()) != null) {
-			res.sendRedirect("cadastra?err=username-ja-cadastrado");
-			return;
-		}
-		
-		userDao.save(usuario);
-		res.sendRedirect("dashboard");
-		
+		userDao.resetSenha(usuario);
+		res.sendRedirect("login");
 	}
 }

@@ -15,7 +15,7 @@ import br.com.uff.uffgamereviews.model.dao.UserLogin;
 @WebServlet("/realizaLogin")
 public class RealizaLoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static final String URL_BASE = "/socialmedia";
+	private static final String URL_BASE = "/uffgamereviews";
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
@@ -28,14 +28,13 @@ public class RealizaLoginServlet extends HttpServlet {
 		
 		if (usuario != null) {
 			HttpSession sessao = req.getSession(true);
-			sessao.setAttribute("username", usuario.getUsername());
-			sessao.setAttribute("email", usuario.getEmail());
+			sessao.setAttribute("username", usuario);
 			
 			res.sendRedirect(URL_BASE + "/dashboard");
 		}
 		
 		else {
-			res.sendRedirect(URL_BASE + "/login?err=erro");
+			res.sendRedirect(URL_BASE + "/login?err=algo-de-errado-nao-esta-certo");
 		}
 		
 	}
