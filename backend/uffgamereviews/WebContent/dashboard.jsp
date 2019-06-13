@@ -97,7 +97,7 @@
                         Descrição
                     </div>
                     <div>
-                         <c:out value="${descricaoGame}" /> 
+                    	<p> <% out.print("Este jogo é muito legal"); %> </p>
                     </div>
                     <div class="nes-field form-button">
                         <a type="button" class="nes-btn is-primary" href="tiraEstrela">Like</button>
