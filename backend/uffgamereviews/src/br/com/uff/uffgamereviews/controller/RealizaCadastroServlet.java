@@ -21,6 +21,7 @@ public class RealizaCadastroServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		usuario.setEmail(req.getParameter("email"));
 		usuario.setSenha(req.getParameter("senha"));
+		usuario.setEstrelas(10);
 		
 		userDao.save(usuario);
 		res.sendRedirect("dashboard");

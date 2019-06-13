@@ -6,7 +6,6 @@ public class Game {
 	private String descricao;
 	private String capa;
 	private int nota;
-	private User owner;
 	
 	public Game(int idJogo, String nome, String descricao, String capa, int nota, User owner) {
 		super();
@@ -15,9 +14,10 @@ public class Game {
 		this.descricao = descricao;
 		this.capa = capa;
 		this.nota = nota;
-		this.owner = owner;
 	}
-	public Game() {}
+	public Game() {
+		this.nota = 0;
+	}
 	public int getIdJogo() {
 		return idJogo;
 	}
@@ -47,11 +47,5 @@ public class Game {
 	}
 	public void setNota(int nota) {
 		this.nota = nota;
-	}
-	public User getOwner() {
-		return owner;
-	}
-	public void setOwner(User owner) {
-		this.owner = owner;
 	}
 }

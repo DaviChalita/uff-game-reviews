@@ -1,5 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<%@ page import="java.util.List"%>
+<%@ page import="java.util.ArrayList"%>
+<%@ page import="br.com.uff.uffgamereviews.model.User"%>
+
+<%
+	HttpSession sessao = request.getSession(true);
+	User usuario = (User) sessao.getAttribute("usuario");
+%>
 
 <html lang="en">
 
@@ -22,18 +30,12 @@
                 <div class="nes-container id-column bgyellow">
                     <div class="stars">
                         <section class="icon-list">
-                           <%--  <% for (int i = 0; i < numEstrelasUser; i++) { %> --%>
+                             <% for (int i = 0; i < usuario.getEstrelas(); i++) { %>
                                  <i class="nes-icon is-medium-50% star"></i> 
-                                 <i class="nes-icon is-medium-50% star"></i> 
-                                 <i class="nes-icon is-medium-50% star"></i> 
-                                 <i class="nes-icon is-medium-50% star"></i> 
-                                 <i class="nes-icon is-medium-50% star"></i> 
-                                 <i class="nes-icon is-medium-50% star"></i> 
-                                 <i class="nes-icon is-medium-50% star"></i> 
-                            <%--<% } %>
-                            <% for (int i = numEstrelasUser; i < 10; i++) { %>
+                            <% } %>
+                            <% for (int i = usuario.getEstrelas(); i < 10; i++) { %>
                                 <i class="nes-icon is-medium-50% star is-empty"></i>
-                            <% } %> --%>
+                            <% } %>
                         </section>
                     </div>
                 </div>
@@ -92,18 +94,13 @@
                 </div>
                 <div class="nes-container with-title is-centered bgyellow margin-28px">
                     <div class="title bgyellow">
-                        Descrição
+                        DescriÃ§Ã£o
                     </div>
                     <div>
                          <c:out value="${descricaoGame}" /> 
                     </div>
-                    <div><%-- 
-                        <% for (int i = 0; i < numEstrelasGame; i++) { %>
-                            <i class="nes-icon is-medium-50% star"></i>
-                        <% } %> --%>
-                    </div>
                     <div class="nes-field form-button">
-                        <button type="button" class="nes-btn is-primary">Like</button>
+                        <a type="button" class="nes-btn is-primary" href="tiraEstrela">Like</button>
                     </div>
                 </div>
             </div>

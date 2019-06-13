@@ -17,9 +17,10 @@ public class UserDao implements Dao<User> {
 		Connection con = Connector.getConnection();
 		
 		try {
-			PreparedStatement st = con.prepareStatement("insert into user(email, senha) values(?, ?)");
+			PreparedStatement st = con.prepareStatement("insert into user(email, senha, estrelas) values(?, ?, ?)");
 			st.setString(1, user.getEmail());
 			st.setString(2, user.getSenha());
+			st.setInt(3, user.getEstrelas());
 			st.executeUpdate();
 
 			con.close();
@@ -60,6 +61,7 @@ public class UserDao implements Dao<User> {
 				usuario = new User();
 				usuario.setEmail(rs.getString("email"));
 				usuario.setSenha(rs.getString("senha"));
+				usuario.setEstrelas(rs.getInt("estrelas"));
 				
 				con.close();
 			}
@@ -71,6 +73,26 @@ public class UserDao implements Dao<User> {
 		
 		return usuario;	
 	}
+	
+	public User tiraEstrela(User user) {		
+		Connection con = Connector.getConnection();
+
+		if (user.getEstrelas() > 0) {
+			try {
+				PreparedStatement st = con.prepareStatement("update user set estrelas=? where email=?");
+				user.setEstrelas(user.getEstrelas()-1);
+				st.setInt(1, user.getEstrelas());
+				st.setString(2, user.getEmail());
+				ResultSet rs = st.executeQuery();
+				
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		return user;
+	}
+
 	
 	public User getByUsername(String username) {		
 		Connection con = Connector.getConnection();

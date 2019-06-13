@@ -18,9 +18,8 @@ public class GameDao implements Dao<Game>{
 		// TODO Auto-generated method stub
 		Connection con = Connector.getConnection();
 		try {
-			PreparedStatement st = con.prepareStatement("insert into jogo(rated_username, nota) values(?, ?)");
-			st.setString(1, jogo.getOwner().getUsername());
-			st.setInt(2, jogo.getNota());
+			PreparedStatement st = con.prepareStatement("insert into jogo (nota) values(?)");
+			st.setInt(1, jogo.getNota());
 			st.executeUpdate();
 
 			con.close();
@@ -54,9 +53,8 @@ public class GameDao implements Dao<Game>{
 			st1.setInt(1, id);
 			st1.executeUpdate();
 			
-			PreparedStatement st = con.prepareStatement("insert into jogo(rated_username, nota) values(?, ?)");
-			st.setString(1, jogo.getOwner().getUsername());
-			st.setInt(2, jogo.getNota());
+			PreparedStatement st = con.prepareStatement("insert into jogo(nota) values(?)");
+			st.setInt(1, jogo.getNota());
 			st.executeUpdate();
 
 			con.close();
@@ -78,12 +76,8 @@ public class GameDao implements Dao<Game>{
 			ResultSet rs = st.executeQuery();
 			
 			if (rs.next()) {
-				User user = new User();
-				user = userDao.getByUsername(rs.getString("rated_username"));
-				
 				jogo = new Game();
 				jogo.setIdJogo(rs.getInt("idJogo"));
-				jogo.setOwner(user);
 				jogo.setNota(rs.getInt("nota"));
 				con.close();
 			}
@@ -103,6 +97,7 @@ public class GameDao implements Dao<Game>{
 		
 		try {
 			PreparedStatement ps = con.prepareStatement("select * from jogo");
+			
 			ResultSet rs = ps.executeQuery();
 			
 			while (rs.next()) {
@@ -111,7 +106,6 @@ public class GameDao implements Dao<Game>{
 				
 				Game jogo = new Game();
 				jogo.setIdJogo(rs.getInt("idJogo"));
-				jogo.setOwner(user);
 				jogo.setNota(rs.getInt("nota"));
 				jogos.add(jogo);
 			}
@@ -124,6 +118,21 @@ public class GameDao implements Dao<Game>{
 		}
 		
 		return jogos;	
+	}
+	
+	public void adiciona(Game game) {		
+		Connection con = Connector.getConnection();
+
+		try {
+			PreparedStatement st = con.prepareStatement("update game set nota=? where nome=?");
+			st.setInt(1, (game.getNota()+1));
+			st.setString(2, game.getNome());
+			ResultSet rs = st.executeQuery();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 }

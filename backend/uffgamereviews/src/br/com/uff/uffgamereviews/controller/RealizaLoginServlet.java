@@ -30,7 +30,7 @@ public class RealizaLoginServlet extends HttpServlet {
 			HttpSession sessao = req.getSession(true);
 			sessao.setAttribute("usuario", usuario);
 			
-			res.sendRedirect(URL_BASE + "dashboard");
+			res.sendRedirect(URL_BASE + "/dashboard");
 		}
 		
 		else {

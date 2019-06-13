@@ -6,6 +6,7 @@ USE uffgamereviews;
 CREATE TABLE user (
   email VARCHAR(45) NOT NULL,
   senha VARCHAR(45) NOT NULL,
+  estrelas INT,
   PRIMARY KEY (email));
 
 CREATE TABLE jogo (
@@ -14,9 +15,5 @@ CREATE TABLE jogo (
   descricao VARCHAR(280) NOT NULL,
   nome VARCHAR(45) NOT NULL,
   icon VARCHAR(45) NOT NULL,
-  rated_username VARCHAR(45) NOT NULL,
-  PRIMARY KEY (idJogo),
-    FOREIGN KEY (rated_username) REFERENCES user (email));
-    
-insert into user (email, senha)
- values('chalitameneguelli14@gmail.com', '123');
+  PRIMARY KEY (idJogo)
+)
